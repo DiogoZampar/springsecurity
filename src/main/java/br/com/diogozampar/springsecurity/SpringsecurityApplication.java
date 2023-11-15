@@ -26,10 +26,21 @@ public class SpringsecurityApplication {
 @RestController
 class HttpController{
 
-	@GetMapping
+
+
+	@GetMapping("/public")
 	String publicRoute(){
-		return "Welcome to "+ this.getClass().getName() + "!";
+		return "Welcome to the public route!";
 	}
+
+
+
+	@GetMapping("/private")
+	String privateRoute(){
+		return "Welcome to the private route!";
+	}
+
+
 
 
 }
