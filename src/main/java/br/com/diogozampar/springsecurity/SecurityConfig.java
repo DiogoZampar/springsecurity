@@ -22,7 +22,7 @@ public class SecurityConfig {
             authorizeConfig.requestMatchers("/logout").permitAll();
             authorizeConfig.anyRequest().authenticated();
         })
-        .formLogin(Customizer.withDefaults())
+        .oauth2Login(Customizer.withDefaults())
         .build();
     }
 
